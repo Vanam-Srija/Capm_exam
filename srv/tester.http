@@ -1,0 +1,94 @@
+###Get the Service - Employee
+http://localhost:4004/odata/v4/EmployeeService
+ 
+###Get the Service - Employee with metadata
+http://localhost:4004/odata/v4/EmployeeService?$metadata
+ 
+###Get the Service - EmployeeSet Get all employee data
+http://localhost:4004/odata/v4/EmployeeService/EmployeeSet
+ 
+### Get the top 2 employees, use orderby salaryAmount.
+http://localhost:4004/odata/v4/EmployeeService/EmployeeSet?$top=2&orderby=salaryAmount
+
+### Get the name starts with 'S'
+http://localhost:4004/odata/v4/EmployeeService/EmployeeSet?$nameFirst='S'
+
+
+
+
+###Get the service - Delete the employee data with emp id
+DELETE http://localhost:4004/odata/v4/EmployeeService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+
+{}
+
+
+
+
+###CREATE an employee with salary <50000 & currency code USD.
+POST http://localhost:4004/odata/v4/EmployeeService/EmployeeSet
+Content-Type: application/json
+ 
+{
+    "nameFirst": "Srija",
+    "nameMiddle": null,
+    "nameLast": "Vanam",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": "+917989117322",
+    "email": "sally.spring@itelo.info",
+    "loginName": "SPRINGS",
+    "Currency_code": "USD",
+    "salaryAmount": 5000,
+    "accountNumber": "111222333",
+    "bankId": "510000655",
+    "bankName": "My Bank of Antioch"
+    }
+ 
+
+###CREATE an employee with salary >50000 & currency code USD
+POST http://localhost:4004/odata/v4/EmployeeService/EmployeeSet
+Content-Type: application/json
+ 
+{
+    "nameFirst": "Srija",
+    "nameMiddle": null,
+    "nameLast": "Vanam",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": "+917989117322",
+    "email": "sally.spring@itelo.info",
+    "loginName": "SPRINGS",
+    "Currency_code": "USD",
+    "salaryAmount": 50000000,
+    "accountNumber": "111222333",
+    "bankId": "510000655",
+    "bankName": "My Bank of Antioch"
+    }
+ 
+
+### CREATE an employee with salary <50000 & currency code EUR.
+
+POST http://localhost:4004/odata/v4/EmployeeService/EmployeeSet
+Content-Type: application/json
+ 
+{
+    "nameFirst": "Srija",
+    "nameMiddle": null,
+    "nameLast": "Vanam",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": "+917989117322",
+    "email": "sally.spring@itelo.info",
+    "loginName": "SPRINGS",
+    "Currency_code": "EUR",
+    "salaryAmount": 5000,
+    "accountNumber": "111222333",
+    "bankId": "510000655",
+    "bankName": "My Bank of Antioch"
+    }
+
+    
