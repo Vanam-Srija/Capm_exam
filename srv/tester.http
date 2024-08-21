@@ -10,8 +10,6 @@ http://localhost:4004/odata/v4/EmployeeService/EmployeeSet
 ### Get the top 2 employees, use orderby salaryAmount.
 http://localhost:4004/odata/v4/EmployeeService/EmployeeSet?$top=2&orderby=salaryAmount
 
-### Get the name starts with 'S'
-http://localhost:4004/odata/v4/EmployeeService/EmployeeSet?$nameFirst='S'
 
 
 
@@ -91,4 +89,6 @@ Content-Type: application/json
     "bankName": "My Bank of Antioch"
     }
 
-    
+###Delete operaion
+DELETE http://localhost:4004/odata/v4/EmployeeService/EmployeeSet/cca7d05e-0904-4b33-9068-541a3fb03a8e
+Content-Type: application/json
