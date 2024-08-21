@@ -14,6 +14,8 @@ http://localhost:4004/odata/v4/EmployeeService/EmployeeSet?$top=2&orderby=salary
 
 
 
+
+
 ###Get the service - Delete the employee data with emp id
 DELETE http://localhost:4004/odata/v4/EmployeeService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
 Content-Type: application/json
@@ -39,6 +41,7 @@ Content-Type: application/json
     "loginName": "SPRINGS",
     "Currency_code": "USD",
     "salaryAmount": 5000,
+    
     "accountNumber": "111222333",
     "bankId": "510000655",
     "bankName": "My Bank of Antioch"
